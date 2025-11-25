@@ -1,0 +1,58 @@
+[data-testid="stAppViewContainer"] {
+    background-image: url("data:image/png;base64,BG_IMAGE");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Card */
+div[data-testid="stVerticalBlock"]:has(.card-flag) {
+    background-color: white;
+    padding: 2.5em;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 700px;
+    margin: 3em auto;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out forwards;
+    transition: all 0.3s ease-in-out;
+}
+div[data-testid="stVerticalBlock"]:has(.card-flag):hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(255,190,60,0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button */
+div.stButton > button {
+    background-color: #FFDE63 !important;
+    color: black !important;
+    border-radius: 10px !important;
+    font-size: 18px !important;
+    height: 3em !important;
+    width: 100% !important;
+    cursor: pointer !important;
+
+    transition: all 0.3s ease-in-out !important;
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+
+div.stButton > button:hover {
+    background-color: #FFBC4C !important;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+div.stButton > button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
